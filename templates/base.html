@@ -1,0 +1,21 @@
+<html>
+    <head>
+    </title>{% block title %}{% endblock title %}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body>
+       {% comment %} <header>{% include "snippet/header.html" %}</header> {% endcomment %}
+
+       <main> <h4> {% block content %}
+        {% endblock content %}</h4></main>
+
+        
+            {% include "snippet/footer.html" %}
+            
+        
+
+
+
+
+    </body>
+</html>

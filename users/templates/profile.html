@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook </title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <header class="bg-blue-600 text-white py-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href={% url "home" %}><h1 class="text-2xl font-semibold">Facebook</h1></a>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href={% url "home" %} class="hover:text-gray-200">Home</a></li>
+                    <li><a href="#" class="hover:text-gray-200">Profile</a></li>
+                    <li><a href="{% url "login" %}" class="hover:text-gray-200">logout</a></li>
+                    <!-- Add more navigation links as needed -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="profile py-8 bg-gray-200">
+        <div class="container mx-auto">
+            <div class="flex items-center justify-center">
+                <div class="bg-white p-6 rounded shadow">
+                    <h2 class="text-xl font-semibold mb-4">Profile</h2>
+                    <img src="https://scontent.fktm20-1.fna.fbcdn.net/v/t39.30808-6/279651795_1516002192134529_6561781872492989053_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=9c7eae&_nc_ohc=RxLaaZkDLXEAX_kRsy9&_nc_ht=scontent.fktm20-1.fna&oh=00_AfC8EUwVj0GPodtLZ13wRKaiwKLnptH8UXcXoop7nrc_gg&oe=65D2285F" class="rounded-full w-32 h-32 mx-auto mb-4">
+                    <p class="text-center text-gray-800">Pemba waiba</p>
+                    <p class="text-center text-gray-600"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="main-content py-8">
+        <div class="container mx-auto">
+            <div class="bg-white p-6 rounded shadow mb-8">
+                <div class="flex items-center mb-4">
+                    <textarea id="post-text" class="w-full px-4 py-2 border rounded-lg mr-4 focus:outline-none" placeholder="What's on your mind?"></textarea>
+                    <button id="post-button" class="bg-blue-600 text-white px-4 py-2 rounded-lg">Post</button>
+                </div>
+            </div>
+            <div id="posts-container">
+                <!-- Posts will be dynamically added here -->
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-200 py-4">
+        <div class="container mx-auto">
+            <p class="text-center">&copy; 2024 Facebook Clone</p>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
